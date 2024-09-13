@@ -7,7 +7,21 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      // keyframes: {
+      //   move: {
+      //     "0%": {
+      //       transform: "translateX(0%)",
+      //     },
+      //     "100%": {
+      //       transform: "translateX(-50%)",
+      //     },
+      //   },
+      // },
+      // animation: {
+      //   move: "move 3s linear infinite",
+      // },
+    },
   },
   plugins: [],
 };
