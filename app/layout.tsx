@@ -1,9 +1,9 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import { twMerge } from "tailwind-merge";
+import { DM_Sans } from "next/font/google";
 
-const inter = Inter({
+const dm_sans = DM_Sans({
   subsets: ["latin"],
 });
 
@@ -20,7 +20,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={twMerge(inter.className, "antialiased scrollbar-hidden")}
+        className={twMerge(
+          dm_sans.className,
+          "antialiased scrollbar-hidden bg-[#EAEEFE]"
+        )}
       >
         {children}
       </body>
