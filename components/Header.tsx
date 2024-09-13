@@ -4,11 +4,12 @@ import { links } from "@/lib/data";
 import Image from "next/image";
 import Logo from "@/assets/logosaas.png";
 
+import Button from "./Button";
 import { ArrowRight, Menu } from "lucide-react";
 
 const Header = () => {
   return (
-    <header className="sticky top-0 backdrop-blur-md">
+    <header className="z-40 sticky top-0 backdrop-blur-md border-b border-black/10">
       <div className="bg-black">
         <div className="section-container">
           {/* Banner */}
@@ -48,9 +49,7 @@ const Header = () => {
                 </Link>
               ))}
 
-              <button className="bg-black text-white px-4 py-2 rounded-lg font-medium inline-flex items-center justify-center tracking-tight">
-                Get for free
-              </button>
+              <Button>Get for free</Button>
             </nav>
           </div>
         </div>
