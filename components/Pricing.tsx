@@ -6,7 +6,7 @@ import { twMerge } from "tailwind-merge";
 
 const Pricing = () => {
   return (
-    <section className="py-24">
+    <section className="bg-white py-24">
       <div className="section-container">
         <div className="max-w-[540px] mx-auto">
           <h2 className="section-heading">Pricing</h2>
