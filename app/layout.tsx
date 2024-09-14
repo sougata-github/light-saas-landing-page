@@ -19,12 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={twMerge(
-          dm_sans.className,
-          "antialiased scrollbar-hidden bg-[#EAEEFE]"
-        )}
-      >
+      <body className={twMerge(dm_sans.className, "antialiased bg-[#EAEEFE]")}>
         {children}
       </body>
     </html>
