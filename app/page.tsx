@@ -4,6 +4,7 @@ import LogoTicker from "@/components/LogoTicker";
 import Product from "@/components/Product";
 import Pricing from "@/components/Pricing";
 import Testimonial from "@/components/Testimonial";
+import CTA from "@/components/CTA";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Product />
       <Pricing />
       <Testimonial />
+      <CTA />
     </div>
   );
 }

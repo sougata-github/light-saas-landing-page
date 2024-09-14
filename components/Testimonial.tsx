@@ -15,8 +15,8 @@ const Testimonial = () => {
               Testimonials
             </div>
           </div>
-          <h2 className="section-heading">What our users say</h2>
-          <p className="section-subheading">
+          <h2 className="section-heading mt-5">What our users say</h2>
+          <p className="section-subheading mt-5">
             From intuitive design to powerful features, our app has become an
             essential tool for users around the world.
           </p>
