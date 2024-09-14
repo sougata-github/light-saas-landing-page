@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 import { pricingData } from "@/lib/data";
 import { CheckCircle2 } from "lucide-react";
 
@@ -36,9 +40,22 @@ const Pricing = () => {
                 </h3>
                 {tier.popular && (
                   <div className="inline-flex text-sm px-4 py-1.5 rounded-md border border-white/20">
-                    <span className="font-medium bg-[linear-gradient(to_right,#DD7DDF,#E1CD86,#BBCB92,#71C2EF,#3BFFFF,#DD7DDF)] text-transparent bg-clip-text">
+                    <motion.span
+                      className="font-medium bg-[linear-gradient(to_right,#DD7DDF,#E1CD86,#BBCB92,#71C2EF,#3BFFFF,#DD7DDF,#DD7DDF,#E1CD86,#BBCB92,#71C2EF,#3BFFFF,#DD7DDF)] 
+                    [background-size:200%]
+                    text-transparent bg-clip-text"
+                      animate={{
+                        backgroundPositionX: "100%",
+                      }}
+                      transition={{
+                        duration: 2,
+                        repeat: Infinity,
+                        ease: "linear",
+                        repeatType: "loop",
+                      }}
+                    >
                       Popular
-                    </span>
+                    </motion.span>
                   </div>
                 )}
               </div>
