@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 import Button from "./Button";
 
 import Image from "next/image";
@@ -33,31 +37,40 @@ const Hero = () => {
 
           {/* Hero Images */}
           <div className="mt-20 md:mt-0 md:h-[448px] lg:h-[548px] relative">
-            <Image
-              priority
-              unoptimized
-              quality={100}
-              src={Cog}
+            <motion.img
+              src={Cog.src}
               alt="Hero cog image"
-              height={40}
-              width={40}
               className="mx-auto max-w-lg w-full md:h-full md:w-auto md:max-w-none"
+              initial={{
+                y: 0,
+              }}
+              animate={{
+                y: [30, -30],
+              }}
+              transition={{
+                ease: "easeInOut",
+                repeat: Infinity,
+                repeatType: "mirror",
+                duration: 3,
+              }}
             />
+
             <Image
-              priority
               unoptimized
+              priority
               quality={100}
-              src={Cylinder}
+              src={Cylinder.src}
               alt="Hero cylinder image"
+              className="hidden lg:block lg:absolute -top-8 -left-28"
               height={220}
               width={220}
-              className="hidden lg:block lg:absolute -top-8 -left-28"
             />
+
             <Image
-              priority
               unoptimized
+              priority
               quality={100}
-              src={Noodle}
+              src={Noodle.src}
               alt="Hero Noodle image"
               height={220}
               width={220}
