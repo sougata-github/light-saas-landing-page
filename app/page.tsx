@@ -5,6 +5,7 @@ import Product from "@/components/Product";
 import Pricing from "@/components/Pricing";
 import Testimonial from "@/components/Testimonial";
 import CTA from "@/components/CTA";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Pricing />
       <Testimonial />
       <CTA />
+      <Footer />
     </div>
   );
 }

@@ -31,6 +31,33 @@ export const links = [
   },
 ];
 
+export const footerLinks = [
+  {
+    label: "About",
+    link: "#",
+  },
+  {
+    label: "Features",
+    link: "#",
+  },
+  {
+    label: "Customers",
+    link: "#",
+  },
+  {
+    label: "Pricing",
+    link: "#",
+  },
+  {
+    label: "Help",
+    link: "#",
+  },
+  {
+    label: "Careers",
+    link: "#",
+  },
+];
+
 export const pricingData = [
   {
     title: "Free",
