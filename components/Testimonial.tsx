@@ -1,5 +1,5 @@
 import { testimonials } from "@/lib/data";
-import TestimonialCard from "./TestimonialCard";
+import TestimonialCards from "./TestimonialCards";
 
 const firstColumn = testimonials.slice(0, 3);
 const secondColumn = testimonials.slice(3, 6);
@@ -23,22 +23,18 @@ const Testimonial = () => {
         </div>
 
         {/* Testimonials */}
-        <div className="flex justify-center gap-6">
-          <div className="flex flex-col gap-6 mt-10 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)]">
-            {firstColumn.map((testimonial) => (
-              <TestimonialCard key={testimonial.name} {...testimonial} />
-            ))}
-          </div>
-          <div className="hidden md:flex flex-col gap-6 mt-10 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)]">
-            {secondColumn.map((testimonial) => (
-              <TestimonialCard key={testimonial.name} {...testimonial} />
-            ))}
-          </div>
-          <div className="hidden lg:flex flex-col gap-6 mt-10 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)]">
-            {thirdColumn.map((testimonial) => (
-              <TestimonialCard key={testimonial.name} {...testimonial} />
-            ))}
-          </div>
+        <div className="flex justify-center gap-6 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] mt-10 max-h-[738px] overflow-hidden">
+          <TestimonialCards testimonials={firstColumn} duration={12} />
+          <TestimonialCards
+            testimonials={secondColumn}
+            className="hidden md:block"
+            duration={18}
+          />
+          <TestimonialCards
+            testimonials={thirdColumn}
+            className="hidden lg:block"
+            duration={16}
+          />
         </div>
       </div>
     </section>
